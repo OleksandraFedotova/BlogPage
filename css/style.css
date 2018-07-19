@@ -1,0 +1,299 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff2fd;
+  color: #444;
+}
+
+h1, p {
+  margin: 0 0 1em 0;
+}
+
+/* no grid support? */
+.sidebar {
+  float: right;
+  width: 19.1489%;
+}
+
+.content {
+  float: left;
+  width: 79.7872%;
+}
+
+/* make a grid */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+}
+
+
+.wrapper > * {
+  background-color:#ffffff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  color:#545353;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+.header, .footer {
+  grid-column: 1 / -1;
+  /* needed for the floated layout */
+  clear: both;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.card img {
+  max-width: 100%;
+}
+.text {
+  padding: 0 20px 20px;
+}
+.text > button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  }
+.card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  }
+
+ .e {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .f {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .g {
+        grid-column: 2;
+        grid-row: 2;
+    }
+	
+	 .j {
+        grid-column: 1;
+        grid-row: 3;
+    }
+	 .k {
+        grid-column: 2;
+        grid-row: 3;
+    }
+	.l {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+
+/*preloader*/
+#fountainG{
+	position:relative;
+	width:234px;
+	height:28px;
+	margin:auto;
+}
+
+.fountainG{
+	position:absolute;
+	top:0;
+	background-color:#fff2fd;
+	width:28px;
+	height:28px;
+	animation-name:bounce_fountainG;
+		-o-animation-name:bounce_fountainG;
+		-ms-animation-name:bounce_fountainG;
+		-webkit-animation-name:bounce_fountainG;
+		-moz-animation-name:bounce_fountainG;
+	animation-duration:1.5s;
+		-o-animation-duration:1.5s;
+		-ms-animation-duration:1.5s;
+		-webkit-animation-duration:1.5s;
+		-moz-animation-duration:1.5s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	transform:scale(.3);
+		-o-transform:scale(.3);
+		-ms-transform:scale(.3);
+		-webkit-transform:scale(.3);
+		-moz-transform:scale(.3);
+	border-radius:19px;
+		-o-border-radius:19px;
+		-ms-border-radius:19px;
+		-webkit-border-radius:19px;
+		-moz-border-radius:19px;
+}
+
+#fountainG_1{
+	left:0;
+	animation-delay:0.6s;
+		-o-animation-delay:0.6s;
+		-ms-animation-delay:0.6s;
+		-webkit-animation-delay:0.6s;
+		-moz-animation-delay:0.6s;
+}
+
+#fountainG_2{
+	left:29px;
+	animation-delay:0.75s;
+		-o-animation-delay:0.75s;
+		-ms-animation-delay:0.75s;
+		-webkit-animation-delay:0.75s;
+		-moz-animation-delay:0.75s;
+}
+
+#fountainG_3{
+	left:58px;
+	animation-delay:0.9s;
+		-o-animation-delay:0.9s;
+		-ms-animation-delay:0.9s;
+		-webkit-animation-delay:0.9s;
+		-moz-animation-delay:0.9s;
+}
+
+#fountainG_4{
+	left:88px;
+	animation-delay:1.05s;
+		-o-animation-delay:1.05s;
+		-ms-animation-delay:1.05s;
+		-webkit-animation-delay:1.05s;
+		-moz-animation-delay:1.05s;
+}
+
+#fountainG_5{
+	left:117px;
+	animation-delay:1.2s;
+		-o-animation-delay:1.2s;
+		-ms-animation-delay:1.2s;
+		-webkit-animation-delay:1.2s;
+		-moz-animation-delay:1.2s;
+}
+
+#fountainG_6{
+	left:146px;
+	animation-delay:1.35s;
+		-o-animation-delay:1.35s;
+		-ms-animation-delay:1.35s;
+		-webkit-animation-delay:1.35s;
+		-moz-animation-delay:1.35s;
+}
+
+#fountainG_7{
+	left:175px;
+	animation-delay:1.5s;
+		-o-animation-delay:1.5s;
+		-ms-animation-delay:1.5s;
+		-webkit-animation-delay:1.5s;
+		-moz-animation-delay:1.5s;
+}
+
+#fountainG_8{
+	left:205px;
+	animation-delay:1.64s;
+		-o-animation-delay:1.64s;
+		-ms-animation-delay:1.64s;
+		-webkit-animation-delay:1.64s;
+		-moz-animation-delay:1.64s;
+}
+
+
+
+@keyframes bounce_fountainG{
+	0%{
+	transform:scale(1);
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+	transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-o-keyframes bounce_fountainG{
+	0%{
+	-o-transform:scale(1);
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+	-o-transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes bounce_fountainG{
+	0%{
+	-ms-transform:scale(1);
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+	-ms-transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes bounce_fountainG{
+	0%{
+	-webkit-transform:scale(1);
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+	-webkit-transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes bounce_fountainG{
+	0%{
+	-moz-transform:scale(1);
+		background-color:rgb(0,0,0);
+	}
+
+	100%{
+	-moz-transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}
