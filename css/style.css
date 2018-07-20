@@ -431,5 +431,9 @@ input{
 	.search-menu{
 		width:13%;
 	}
+	.footer .social-btn-box {
+	    width: 46%;
+    float: right;
+     }
 }
 
