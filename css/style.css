@@ -1,19 +1,38 @@
-*, *:before, *:after {
+*{
+	margin:0;
+	padding:0;
+}
+
+*,
+*:before, *:after {
   box-sizing: border-box;
+}
+
+:root{
+	--main-bckg-color:#fff2fd;
+	--black:black;
+	--text-color:#444;
+	--white:white;
+	--soc-btn-bckg:#f6eff7;
 }
 
 body {
   margin: 20px;
   font-family: 'Open Sans', 'sans-serif';
-  background-color: #fff2fd;
-  color: #444;
+  background-color: var(--main-bckg-color);
+  color: var(--text-color);
   width: auto;
   height: 100%;
   min-height: 555px;
 }
 
-h1, p {
+h1 {
   margin: 0 0 1em 0;
+}
+
+hr{
+	border-color: var(--black);
+    border: 0.5px solid;
 }
 
 aside p{
@@ -40,7 +59,6 @@ aside p{
   grid-gap: 10px;
 }
 
-
 .wrapper > * {
   background-color:#ffffff;
   color: #fff;
@@ -52,12 +70,92 @@ aside p{
   margin-bottom: 10px;
 }
 
-.header, .footer {
+.header,
+.footer {
   grid-column: 1 / -1;
   /* needed for the floated layout */
   clear: both;
+  text-align:center;
+}
+.logo-box{
+	width:20%;
+	float:left;
+	text-align:center;
+	
 }
 
+.header .logo,
+.footer .logo{
+	width:150px;
+	min-height:100px;
+	height:100%;
+}
+
+.social-btn-box{
+    width: 75%;
+    margin-top: 2%;
+	float:left;
+}
+
+.footer .social-btn-box{
+	width:60%;
+}
+
+.footer p{
+	width: 20%;
+    padding: 50px 0 0 0;
+    float: right;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: black;
+  background-color:var(--soc-btn-bckg);
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.menu {
+   display: inline-block;
+    margin-top: 29px;
+    width: 45px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 62px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    cursor: pointer;
+	clear:left;
+}
+
+.bar {
+  width: 80%;
+  height: 3px;
+  background: var(--black);
+  margin: 0 auto 8px 25px;
+  transition: transform 0.4s ease;
+}
+
+.search-menu{
+	width:5%;
+	float:right;
+	min-height:100px;
+}
+
+.search-icon{
+	width:50px;
+	height:50px;
+	float: left;
+    display: block;
+}
 
 .card {
   border: 1px solid #ccc;
@@ -74,7 +172,7 @@ aside p{
 .text {
   padding: 0 20px 20px;
 }
-.text > button {
+button {
   background: gray;
   border: 0;
   color: white;
@@ -84,37 +182,11 @@ aside p{
 
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
   }
 
- .e {
-		grid-row: 2/span 2;
-    }
-
-    .f {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .g {
-        grid-column: 2;
-        grid-row: 2;
-    }
-	
-	 .j {
-        grid-column: 1;
-        grid-row: 3;
-    }
-	 .k {
-        grid-column: 2;
-        grid-row: 3;
-    }
-	.l {
-        grid-column:span 2;
-        grid-row: 4;
-    }
-
+ 
 
 /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
 @supports (display: grid) {
@@ -136,7 +208,7 @@ aside p{
 .fountainG{
 	position:absolute;
 	top:0;
-	background-color:#fff2fd;
+	background-color:var(--main-bckg-color);
 	width:28px;
 	height:28px;
 	animation-name:bounce_fountainG;
@@ -187,6 +259,31 @@ aside p{
 		-ms-animation-delay:0.75s;
 		-webkit-animation-delay:0.75s;
 		-moz-animation-delay:0.75s;
+}
+
+.account{
+	text-align:center;
+}
+
+.text-center{
+	text-align:center;
+}
+
+.contacts{
+	text-align:center;
+}
+
+.contacts .social-btn-box{
+	width:100%;
+}
+
+.account p{
+	text-align:justify;
+	}
+
+.account-img{
+	width:150px;
+	height:150px;
 }
 
 #fountainG_3{
@@ -304,3 +401,32 @@ aside p{
 		background-color:rgb(255,255,255);
 	}
 }
+
+input{
+	width:100%;
+	margin-top:10px;
+}
+
+@media (min-width:320px){
+	
+}
+
+@media only screen and (max-width: 650px) {
+	.grid{
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+			grid-column:1/3;
+	}
+	.sidebar{
+		grid-column:1/3;	}
+	.header{
+		overflow:hidden;
+	}
+	.header .social-btn-box{
+		display:none;
+	}
+	
+	.card{
+		    grid-column: 2;
+	}
+}
+
