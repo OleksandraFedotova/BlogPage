@@ -428,5 +428,8 @@ input{
 	.card{
 		    grid-column: 2;
 	}
+	.search-menu{
+		width:13%;
+	}
 }
 
