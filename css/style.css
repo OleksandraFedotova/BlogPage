@@ -432,8 +432,12 @@ input{
 		width:13%;
 	}
 	.footer .social-btn-box {
-	width: 46%;
+	width: 100%;
     float: right;
      }
+.footer .logo-box,
+.footer p{
+	width:100%;
+}
 }
 
