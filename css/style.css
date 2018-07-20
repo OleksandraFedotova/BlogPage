@@ -407,6 +407,10 @@ input{
 	margin-top:10px;
 }
 
+.header .menu2{
+	display:none;
+}
+
 @media (min-width:320px){
 	
 }
@@ -438,6 +442,19 @@ input{
 .footer .logo-box,
 .footer p{
 	width:100%;
+}
+
+.header .menu2{
+	display:block;
+	width:10%;
+	float:left;
+	margin-top: 15px;
+}
+header .menu{
+	display:none;
+}
+.header .logo-box{
+	    padding-left: 25%;
 }
 }
 
